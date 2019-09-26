@@ -24,6 +24,52 @@
 #define MATH_H_
 
 //Part of your documentation should be listing the valid inputs and outputs for the functions you create.
-int math(int num1, int num2, char Operator);
+int math(int num1, int num2, char sign);
 
+int main()
+{
+//Part of your documentation should be listing the valid inputs and outputs for the functions you create.
+int num1, num2;
+char sign;
+float result;
+
+printf("Enter a number:" );
+scanf( num1);
+printf("\nEnter another number:");
+scanf(num2);
+
+printf("\nWhat would you like to do with these numbers?");
+scanf(sign);
+
+switch(num1, num2, sign)
+{
+    case '+': return  num1 + num2;
+        
+    case '-': return num1 - num2;
+    
+        
+    case '*': return num1 * num2;
+        
+    case '/': return num1/num2;
+
+    case '%': return num1%num2;
+         
+    case '<': return num1 << num2;
+         
+    case '>': return num1 >> num2;
+         
+    case '&': return num1&num2;
+         
+    case '|': return num1|num2;
+         
+    case '^': return num1^num2;
+
+    case '~': return ~num1;
+         
+    default: 
+        printf("\n error");
+}
+return 0;
+}
 #endif /* MATH_H_ */
+
